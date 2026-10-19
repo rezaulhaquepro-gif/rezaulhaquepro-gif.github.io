@@ -25,6 +25,11 @@ h1 { font-size:clamp(2.4rem, 6vw, 4.7rem); line-height:1.06; letter-spacing:-.04
 .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
 .btn { display:inline-flex; border:1px solid #ffffff80; color:white; text-decoration:none; padding:11px 17px; border-radius:9px; font-weight:700; cursor:pointer; background:transparent; }
 .btn.primary { background:#f1c96f; color:#15243b; border-color:#f1c96f; }
+.cv-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
+.cv-actions .btn { color:var(--navy); border-color:#c8d4e4; background:#fff; }
+.cv-actions .btn.primary { background:#f1c96f; border-color:#f1c96f; }
+.cv-print-only { display:none; }
+@media print { body, #app { background:#fff !important; color:#111 !important; } nav, .hero, #about, #experience, #skills, #training, footer, .cv-actions, .section-head { display:none !important; } #cv-print { display:block !important; } .cv-print-only { display:block !important; } @page { size:A4; margin:14mm; } }
 section { padding:58px 0; }
 .section-head { margin-bottom:24px; }
 .eyebrow { color:var(--green); font-size:.78rem; font-weight:800; text-transform:uppercase; letter-spacing:.14em; }
@@ -54,7 +59,7 @@ footer .wrap { display:flex; justify-content:space-between; gap:16px; flex-wrap:
   <header class="wrap">
     <nav aria-label="Main navigation">
       <div class="brand">MD. REZAUL HAQUE <span style="color:var(--gold)">/</span> IT & NETWORKING</div>
-      <div><a href="#about">Profile</a><a href="#experience">Experience</a><a href="#skills">Skills</a><a href="#training">Training</a><a href="#contact">Contact</a></div>
+      <div><a href="#about">Profile</a><a href="#experience">Experience</a><a href="#academic">Academic Information</a><a href="#skills">Skills</a><a href="#training">Training</a><a href="#contact">Contact</a><a href="#cv">CV</a></div>
     </nav>
   </header>
   <main>
@@ -80,13 +85,21 @@ footer .wrap { display:flex; justify-content:space-between; gap:16px; flex-wrap:
         <div class="section-head"><div class="eyebrow">Professional experience</div><h2>Career history</h2><p class="lead">Experience across quality checking, machine operation and data entry, and IT/network operations.</p></div>
         <div class="grid">
           <article class="card"><div class="icon">2024–Present</div><h3>IT & Networking Executive</h3><p><strong>As-Sunnah Foundation</strong><br>IT & Networking Executive: 1 March 2026 – Present<br>Jr. Executive: 7 October 2024 – 28 February 2026</p><p>Supporting IT operations, network infrastructure, connectivity troubleshooting, MikroTik routers, CCTV surveillance systems, operating systems, and day-to-day technical support. Progressed from Jr. Executive to IT & Networking Executive in March 2026.</p></article>
+          <article class="card"><div class="icon">2018–2024</div><h3>Machine &amp; Data Entry Operator</h3><p><strong>Checkpoint Systems Bangladesh Limited</strong><br>15 October 2018 – 25 May 2024</p><p>Machine operation and data-entry responsibilities, with attention to accurate records, consistent workflow, data handling, and following operational procedures.</p></article>
           <article class="card"><div class="icon">2016–2017</div><h3>Quality Check</h3><p><strong>Walton Hi-Tech Industries Limited</strong><br>2 January 2016 – 30 November 2017</p><p>Quality-checking role focused on inspecting products or work output, following quality requirements, identifying defects or inconsistencies, and supporting production quality standards.</p></article>
-          <article class="card"><div class="icon">2018–2024</div><h3>Machine & Data Entry Operator</h3><p><strong>Checkpoint Systems Bangladesh Limited</strong><br>15 October 2018 – 25 May 2024</p><p>Machine operation and data-entry responsibilities, with attention to accurate records, consistent workflow, data handling, and following operational procedures.</p></article>
           <article class="card"><div class="icon">01</div><h3>IT operations & user support</h3><p>Support day-to-day IT services, investigate technical issues, assist users, and help maintain reliable computer and software operations.</p></article>
           <article class="card"><div class="icon">02</div><h3>Network infrastructure</h3><p>Assist with network device configuration, connectivity checks, troubleshooting, and support across multi-vendor network environments.</p></article>
           <article class="card"><div class="icon">03</div><h3>Router & surveillance systems</h3><p>Work with MikroTik router tools and HD/IP CCTV environments as part of ongoing network and infrastructure support.</p></article>
         </div>
         <p class="lead">Role summaries are written for a professional portfolio from the job titles and experience details provided. We can add specific projects, achievements, and employment milestones if you share them.</p>
+      </div>
+    </section>
+    <section id="academic">
+      <div class="section-head"><div class="eyebrow">Education</div><h2>Academic Information</h2><p class="lead">Academic qualifications and current studies.</p></div>
+      <div class="grid">
+        <article class="card"><h3>Bachelor of Arts (B.A.) — Ongoing</h3><p><strong>Bangladesh Open University (BOU)</strong></p><p>Currently pursuing undergraduate studies.</p></article>
+        <article class="card"><h3>Higher Secondary Certificate (HSC)</h3><p><strong>Sujat Ali Honours College</strong><br>2016 | GPA: 3.08</p></article>
+        <article class="card"><h3>Secondary School Certificate (SSC)</h3><p><strong>Pingna High School</strong><br>2014 | GPA: 4.08</p></article>
       </div>
     </section>
     <section id="skills" style="padding-top:0;">
@@ -121,6 +134,13 @@ footer .wrap { display:flex; justify-content:space-between; gap:16px; flex-wrap:
           <div class="contact-links"><a class="contact-item" href="tel:+8801836799834"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72l.45 3a2 2 0 0 1-.57 1.7L7.1 9.27a16 16 0 0 0 7.63 7.63l1.85-1.85a2 2 0 0 1 1.7-.57l3 .45A2 2 0 0 1 22 16.92z"/></svg><span>01836799834</span></a><a class="contact-item" href="mailto:rezaul.haque.pro@gmail.com"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg><span>rezaul.haque.pro@gmail.com</span></a></div>
           <div class="actions"><a class="btn primary" href="https://rezaulhaquepro-gif.github.io/">Visit my live portfolio</a><button class="btn" id="copyMessage" type="button">Copy LinkedIn connection message</button></div><span id="copyStatus" aria-live="polite" style="margin-left:12px;font-size:.9rem"></span>
         </div>
+      </div>
+    </section>
+    <section id="cv">
+      <div class="wrap">
+        <div class="section-head"><div class="eyebrow">Career documents</div><h2>Professional CV</h2><p class="lead">Download or open the two-page CV PDF. The document uses selectable text, standard headings, and a single-column body; the requested portrait appears in the header.</p></div>
+        <div class="cv-actions"><a class="btn primary" href="rezaul-haque-cv.pdf" download="Md-Rezaul-Haque-CV.pdf">Download CV (PDF)</a><a class="btn" href="rezaul-haque-cv.pdf" target="_blank" rel="noopener">Open CV</a><a class="btn" href="rezaul-haque-cv.pdf" target="_blank" rel="noopener">Print CV (open PDF)</a></div>
+        <p class="lead" style="font-size:.9rem">To print, open the PDF and use your browser’s print control. For strict ATS portals, a no-photo version may parse more reliably.</p>
       </div>
     </section>
   </main>
