@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Md. Rezaul Haque | IT & Network Executive</title>
-<meta name="description" content="Professional portfolio of Md. Rezaul Haque, IT & Network Executive at As-Sunnah Foundation, with experience in network support, MikroTik, CCTV systems, IT operations, and technical training.">
+<title>Rezaul Pro | IT & Network Executive</title>
+<meta name="description" content="Rezaul Pro's professional IT and networking portfolio, featuring network administration, MikroTik, CCTV surveillance, IT support, and professional training.">
 <style>
-:root { color-scheme: light dark; --navy: #10233f; --blue: #2356a8; --gold: #d8a743; --green: #19866b; }
+:root { color-scheme: light dark; --navy: #10233f; --blue: #2356a8; --gold: #d8a743; --green: #4c7c9b; --soft-blue:#eaf2f8; --heading:#315d7c; }
 * { box-sizing: border-box; }
 body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: light-dark(#f3f6fa,#0b1220); color: light-dark(#172338,#e8eef8); line-height: 1.6; }
 #app { min-height: 100vh; width: 100%; background: light-dark(#f3f6fa,#0b1220); border-radius: 0; }
@@ -15,9 +15,8 @@ nav { display:flex; align-items:center; justify-content:space-between; padding:2
 .brand { font-weight:800; letter-spacing:.02em; color:light-dark(var(--navy),#fff); }
 nav a { color:inherit; text-decoration:none; font-size:.94rem; margin-left:20px; }
 .hero { background: linear-gradient(125deg, #10233f, #1c477d 72%, #23776d); color:#fff; padding:76px 0 68px; position:relative; overflow:hidden; }
-.hero-layout { display:grid; grid-template-columns:minmax(0,1fr) 260px; align-items:center; gap:46px; position:relative; z-index:1; }
-.profile-frame { width:100%; max-width:270px; aspect-ratio:1; padding:7px; justify-self:end; border:1px solid #f1c96f99; border-radius:50%; background:linear-gradient(145deg,#f1c96f,#2356a8 58%,#23776d); box-shadow:0 22px 55px #06132970; }
-.profile-photo { display:block; width:100%; height:100%; aspect-ratio:1; object-fit:cover; object-position:center 18%; border-radius:50%; border:3px solid #ffffffd9; }
+.hero-layout { display:grid; grid-template-columns:minmax(0,1fr) 240px; align-items:center; gap:38px; position:relative; z-index:1; }
+.profile-photo { display:block; width:100%; max-width:240px; aspect-ratio:3/4; object-fit:cover; object-position:center top; border-radius:18px; border:3px solid #ffffffa8; box-shadow:0 18px 45px #06132966; }
 .hero:after { content:""; position:absolute; width:360px; height:360px; border:1px solid #ffffff28; border-radius:50%; right:-90px; top:-120px; box-shadow:0 0 0 35px #ffffff08, 0 0 0 75px #ffffff06; }
 .kicker { color:#f1c96f; text-transform:uppercase; font-size:.8rem; letter-spacing:.16em; font-weight:750; }
 h1 { font-size:clamp(2.4rem, 6vw, 4.7rem); line-height:1.06; letter-spacing:-.045em; max-width:760px; margin:15px 0 20px; }
@@ -25,12 +24,8 @@ h1 { font-size:clamp(2.4rem, 6vw, 4.7rem); line-height:1.06; letter-spacing:-.04
 .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:28px; }
 .btn { display:inline-flex; border:1px solid #ffffff80; color:white; text-decoration:none; padding:11px 17px; border-radius:9px; font-weight:700; cursor:pointer; background:transparent; }
 .btn.primary { background:#f1c96f; color:#15243b; border-color:#f1c96f; }
-.cv-actions { display:flex; flex-wrap:wrap; gap:10px; margin-top:18px; }
-.cv-actions .btn { color:var(--navy); border-color:#c8d4e4; background:#fff; }
-.cv-actions .btn.primary { background:#f1c96f; border-color:#f1c96f; }
-.cv-print-only { display:none; }
-@media print { body, #app { background:#fff !important; color:#111 !important; } nav, .hero, #about, #experience, #skills, #training, footer, .cv-actions, .section-head { display:none !important; } #cv-print { display:block !important; } .cv-print-only { display:block !important; } @page { size:A4; margin:14mm; } }
 section { padding:58px 0; }
+section h2 { color:var(--heading); } .navlinks {display:flex; flex-wrap:wrap; gap:10px 14px;} nav a {margin-left:0!important; color:#315d7c!important; font-weight:650;} article.card {margin-bottom:14px;} article.card ul {padding-left:22px; margin:10px 0 0;} article.card li {margin:0 0 7px;} .top-button {position:fixed;right:20px;bottom:20px;z-index:99;background:#315d7c;color:white;text-decoration:none;border-radius:999px;padding:11px 16px;box-shadow:0 4px 16px #10233f30;font-weight:700;} .eyebrow {color:#4c7c9b;}
 .section-head { margin-bottom:24px; }
 .eyebrow { color:var(--green); font-size:.78rem; font-weight:800; text-transform:uppercase; letter-spacing:.14em; }
 h2 { font-size:clamp(1.65rem,3vw,2.35rem); line-height:1.2; margin:7px 0 10px; color:light-dark(var(--navy),#f2f6ff); }
@@ -46,60 +41,35 @@ h2 { font-size:clamp(1.65rem,3vw,2.35rem); line-height:1.2; margin:7px 0 10px; c
 .training .card { border-left:4px solid var(--gold); }
 .contact-links { display:flex; flex-wrap:wrap; gap:12px 22px; margin-top:18px; }
 .contact-links a { color:#fff; overflow-wrap:anywhere; }
-.contact-item { display:inline-flex; align-items:center; gap:9px; }
-.contact-icon { width:19px; height:19px; flex:0 0 19px; vertical-align:middle; }
 footer { background:light-dark(#e7edf5,#080e19); padding:28px 0; color:light-dark(#56647a,#a9b6c9); font-size:.9rem; }
 footer .wrap { display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
-@media(max-width:760px) { .grid {grid-template-columns:1fr 1fr;} .training {grid-template-columns:1fr;} nav a {margin-left:10px;} .hero-layout {grid-template-columns:minmax(0,1fr) 210px; gap:26px;} }
-@media(max-width:520px) { .grid {grid-template-columns:1fr;} .hero {padding:55px 0;} .wrap {width:min(100% - 28px,1080px);} nav {align-items:flex-start; flex-direction:column;} nav a {margin:0 14px 0 0;} .hero-layout {grid-template-columns:1fr; gap:24px;} .profile-frame {max-width:210px; justify-self:center; margin:0 auto;} }
+@media(max-width:760px) { .grid {grid-template-columns:1fr 1fr;} .training {grid-template-columns:1fr;} nav a {margin-left:10px;} .hero-layout {grid-template-columns:minmax(0,1fr) 180px; gap:22px;} }
+@media(max-width:520px) { .grid {grid-template-columns:1fr;} .hero {padding:55px 0;} .wrap {width:min(100% - 28px,1080px);} nav {align-items:flex-start; flex-direction:column;} nav a {margin:0 14px 0 0;} .hero-layout {grid-template-columns:1fr; gap:24px;} .profile-photo {max-width:190px; margin:0 auto;} }
 </style>
 </head>
-<body>
+<body id="top">
 <div id="app">
   <header class="wrap">
     <nav aria-label="Main navigation">
-      <div class="brand">MD. REZAUL HAQUE <span style="color:var(--gold)">/</span> IT & NETWORKING</div>
-      <div><a href="#about">Profile</a><a href="#experience">Experience</a><a href="#academic">Academic Information</a><a href="#skills">Skills</a><a href="#training">Training</a><a href="#contact">Contact</a><a href="#cv">CV</a></div>
+      <div class="brand">REZAUL PRO <span style="color:var(--gold)">/</span> IT & NETWORKING</div>
+      <div class="navlinks"><a href="index.html">Home</a><a href="experience.html">Experience</a><a href="projects.html">Projects</a><a href="academic.html">Academic</a><a href="training.html">Training</a><a href="cv.html">CV</a><a href="contact.html">Contact</a></div>
     </nav>
   </header>
   <main>
     <section class="hero" style="padding-top:0;">
       <div class="wrap hero-layout">
         <div>
-        <div class="kicker">IT Operations · Network Administration · Technical Support</div>
-        <h1>Md. Rezaul Haque</h1>
-        <p>IT & Network Executive at As-Sunnah Foundation, focused on reliable IT operations, network infrastructure support, MikroTik router management, CCTV systems, troubleshooting, and continuous professional development.</p>
-        <div class="actions"><a class="btn primary" href="#experience">Professional experience</a><a class="btn" href="#contact">Contact me</a></div>
+        <div class="kicker">IT Operations · Networking · Surveillance</div>
+        <h1>Reliable IT. Connected systems. Continuous growth.</h1>
+        <p>I’m an IT & Network Executive at As-Sunnah Foundation, with practical experience supporting network infrastructure, multi-vendor network devices, MikroTik routers, CCTV surveillance systems, operating systems, and everyday IT operations.</p>
+        <div class="actions"><a class="btn primary" href="#skills">Explore my skills</a><a class="btn" href="#training">Training & learning</a></div>
         </div>
-        <div class="profile-frame"><img class="profile-photo" src="profile.jpg" alt="Professional portrait of Md. Rezaul Haque" width="270" height="270" onerror="this.onerror=null;this.closest('.profile-frame').style.display='none';document.getElementById('photoNotice').hidden=false;"></div>
-        <p id="photoNotice" hidden style="color:#fff;font-size:.9rem;max-width:240px;">Please upload your photo as <strong>profile.jpg</strong> beside index.html in the GitHub repository.</p>
+        <img class="profile-photo" src="profile.jpg" alt="Professional portrait of Rezaul Pro" width="240" height="320">
       </div>
     </section>
     <section id="about">
       <div class="wrap">
-        <div class="section-head"><div class="eyebrow">Professional profile</div><h2>Reliable support. Practical problem-solving. Continuous learning.</h2><p class="lead">I am an IT & Network Executive at As-Sunnah Foundation with hands-on exposure to network devices, router administration, CCTV surveillance, operating systems, and user-facing IT support. My approach is to troubleshoot methodically, maintain dependable services, communicate clearly, and keep strengthening my technical skills.</p><div class="contact-links" style="color:inherit"><a class="contact-item" style="color:inherit" href="tel:+8801836799834"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72l.45 3a2 2 0 0 1-.57 1.7L7.1 9.27a16 16 0 0 0 7.63 7.63l1.85-1.85a2 2 0 0 1 1.7-.57l3 .45A2 2 0 0 1 22 16.92z"/></svg><span>01836799834</span></a><a class="contact-item" style="color:inherit" href="mailto:rezaul.haque.pro@gmail.com"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg><span>rezaul.haque.pro@gmail.com</span></a></div></div>
-      </div>
-    </section>
-    <section id="experience" style="padding-top:0;">
-      <div class="wrap">
-        <div class="section-head"><div class="eyebrow">Professional experience</div><h2>Career history</h2><p class="lead">Experience across quality checking, machine operation and data entry, and IT/network operations.</p></div>
-        <div class="grid">
-          <article class="card"><div class="icon">2024–Present</div><h3>IT & Networking Executive</h3><p><strong>As-Sunnah Foundation</strong><br>IT & Networking Executive: 1 March 2026 – Present<br>Jr. Executive: 7 October 2024 – 28 February 2026</p><p>Supporting IT operations, network infrastructure, connectivity troubleshooting, MikroTik routers, CCTV surveillance systems, operating systems, and day-to-day technical support. Progressed from Jr. Executive to IT & Networking Executive in March 2026.</p></article>
-          <article class="card"><div class="icon">2018–2024</div><h3>Machine &amp; Data Entry Operator</h3><p><strong>Checkpoint Systems Bangladesh Limited</strong><br>15 October 2018 – 25 May 2024</p><p>Machine operation and data-entry responsibilities, with attention to accurate records, consistent workflow, data handling, and following operational procedures.</p></article>
-          <article class="card"><div class="icon">2016–2017</div><h3>Quality Check</h3><p><strong>Walton Hi-Tech Industries Limited</strong><br>2 January 2016 – 30 November 2017</p><p>Quality-checking role focused on inspecting products or work output, following quality requirements, identifying defects or inconsistencies, and supporting production quality standards.</p></article>
-          <article class="card"><div class="icon">01</div><h3>IT operations & user support</h3><p>Support day-to-day IT services, investigate technical issues, assist users, and help maintain reliable computer and software operations.</p></article>
-          <article class="card"><div class="icon">02</div><h3>Network infrastructure</h3><p>Assist with network device configuration, connectivity checks, troubleshooting, and support across multi-vendor network environments.</p></article>
-          <article class="card"><div class="icon">03</div><h3>Router & surveillance systems</h3><p>Work with MikroTik router tools and HD/IP CCTV environments as part of ongoing network and infrastructure support.</p></article>
-        </div>
-        <p class="lead">Role summaries are written for a professional portfolio from the job titles and experience details provided. We can add specific projects, achievements, and employment milestones if you share them.</p>
-      </div>
-    </section>
-    <section id="academic">
-      <div class="section-head"><div class="eyebrow">Education</div><h2>Academic Information</h2><p class="lead">Academic qualifications and current studies.</p></div>
-      <div class="grid">
-        <article class="card"><h3>Bachelor of Arts (B.A.) — Ongoing</h3><p><strong>Bangladesh Open University (BOU)</strong></p><p>Currently pursuing undergraduate studies.</p></article>
-        <article class="card"><h3>Higher Secondary Certificate (HSC)</h3><p><strong>Sujat Ali Honours College</strong><br>2016 | GPA: 3.08</p></article>
-        <article class="card"><h3>Secondary School Certificate (SSC)</h3><p><strong>Pingna High School</strong><br>2014 | GPA: 4.08</p></article>
+        <div class="section-head"><div class="eyebrow">About me</div><h2>Md. Rezaul Haque</h2><p class="lead">I’m an IT & Network Executive at As-Sunnah Foundation. I focus on keeping IT services reliable, resolving technical issues, and building my knowledge through hands-on work and professional training. I value integrity, teamwork, and continuous improvement.</p><div class="contact-links" style="color:inherit"><a style="color:inherit" href="tel:+8801836799834">Contact: 01836799834</a><a style="color:inherit" href="mailto:rezaul.haque.pro@gmail.com">Email: rezaul.haque.pro@gmail.com</a></div></div>
       </div>
     </section>
     <section id="skills" style="padding-top:0;">
@@ -116,35 +86,44 @@ footer .wrap { display:flex; justify-content:space-between; gap:16px; flex-wrap:
         <div style="margin-top:22px" class="tags"><span class="tag">Computer Networking</span><span class="tag">Network Administration</span><span class="tag">MikroTik</span><span class="tag">Network Troubleshooting</span><span class="tag">CCTV Surveillance</span><span class="tag">IT Infrastructure</span></div>
       </div>
     </section>
+
+    <section id="experience"><div class="wrap"><div class="section-head"><div class="eyebrow">Career history</div><h2>Professional Experience</h2></div>
+      <article class="card"><h3>IT &amp; Networking Executive | As-Sunnah Foundation</h3><p><strong>1 March 2026 – Present</strong></p><ul><li>Provide day-to-day IT and network support across the Foundation and sister concerns.</li><li>Troubleshoot network connectivity, PCs, printers, user devices, operating systems, and related infrastructure.</li><li>Support MikroTik routers, switches, IP/HD CCTV systems, fingerprint attendance devices, and VoIP services.</li><li>Travel between offices and campuses as required to deliver technical support and service.</li></ul></article>
+      <article class="card"><h3>Jr. Executive | As-Sunnah Foundation</h3><p><strong>7 October 2024 – 28 February 2026</strong></p><ul><li>Supported routine operational and technical tasks and assisted colleagues with daily IT needs.</li></ul></article>
+      <article class="card"><h3>Machine &amp; Data Entry Operator | Checkpoint Systems Bangladesh Limited</h3><p><strong>15 October 2018 – 25 May 2024</strong></p><ul><li>Performed machine-operation and data-entry tasks with attention to accuracy, workflow, and established procedures.</li></ul></article>
+      <article class="card"><h3>Quality Check | Walton Hi-Tech Industries Limited</h3><p><strong>2 January 2016 – 30 November 2017</strong></p><ul><li>Carried out quality-checking tasks and followed established quality requirements.</li></ul></article>
+    </div></section>
+    <section id="academic"><div class="wrap"><div class="section-head"><div class="eyebrow">Education</div><h2>Academic Information</h2></div><div class="grid"><article class="card"><h3>Bachelor of Arts (B.A.)</h3><p>Ongoing — Bangladesh Open University (BOU).</p></article><article class="card"><h3>Higher Secondary Certificate (HSC)</h3><p>Sujat Ali Honours College · 2016 · GPA 3.08.</p></article><article class="card"><h3>Secondary School Certificate (SSC)</h3><p>Pingna High School · 2014 · GPA 4.08.</p></article></div></div></section>
+    <section id="projects"><div class="wrap"><div class="section-head"><div class="eyebrow">Infrastructure support</div><h2>Project Summary — As-Sunnah Foundation &amp; Sister Concerns</h2><p class="lead">Multi-site end-user IT support, network operations, printing, CCTV surveillance, smart classrooms, attendance devices, and VoIP support. Site counts below are based on my operational experience and are approximate.</p></div>
+      <article class="card"><h3>As-Sunnah Foundation Head Office</h3><p><strong>Plot 62–64, Road 3, Block A, Aftabnagar, Dhaka 1212</strong> — official foundation address. <a href="https://assunnahfoundation.org/contact" target="_blank" rel="noopener">Official contact page</a>.</p><ul><li>IT and network support for 150+ PCs used by colleagues.</li><li>Printer support, network troubleshooting, and maintenance.</li><li>IP CCTV surveillance floor planning and installation support for 70+ cameras.</li></ul></article>
+      <article class="card"><h3>As-Sunnah Skill Development Institute — Shatarkul Campus</h3><p><strong>Near Ali Nagar Gate, Shatarkul Road, North Badda, Dhaka</strong> — public institute listings identify the area as near Alinagar Gate; confirm exact campus address with the organization.</p><ul><li>Support for two dedicated computer labs, each with 25 PCs, plus 30+ trainer PCs and 11+ classroom PCs.</li><li>Support for 11+ Optoma/Newline smartboards, printers, network connectivity, troubleshooting, one fingerprint device, and VoIP.</li><li>Provide on-site service at other sister-concern offices when assigned.</li></ul></article>
+      <article class="card"><h3>Madrashatus Sunnah — Shatarkul Branch (Prime)</h3><ul><li>Support PCs across a new five-floor building, with 20+ PCs per floor as reported for the site.</li><li>Support 20+ classroom Optoma/Newline smartboards.</li><li>Assist with IP CCTV floor planning, installation, and maintenance for 150+ cameras, plus two fingerprint devices and VoIP.</li></ul></article>
+      <article class="card"><h3>As-Sunnah Masjid Complex — Sunvalley</h3><p><strong>Block B, Road 5/A, Sunvalley, Satarkul, Badda, Dhaka</strong> (location supplied by employee).</p><ul><li>Support 22+ HD cameras and 7+ IP cameras, with further IP camera installation and maintenance needs.</li><li>Provide support for one or two fingerprint attendance devices at each branch, as applicable.</li></ul></article>
+    </div></section>
+
     <section id="training">
       <div class="wrap">
         <div class="section-head"><div class="eyebrow">Learning & development</div><h2>Training and coursework</h2></div>
         <div class="training">
-          <article class="card"><h3>CCNA coursework</h3><p>Completed CCNA training coursework. This is coursework completion, not a claim of holding the official CCNA certification.</p></article>
+          <article class="card"><h3>CCNA coursework — SkillUp (Simplilearn)</h3><p>Completed CCNA coursework through SkillUp by Simplilearn. This is coursework completion, not a claim of holding the official CCNA certification.</p></article>
           <article class="card"><h3>Networking Basics</h3><p>Completed the Networking Basics course from Cisco Networking Academy.</p></article>
-          <article class="card"><h3>As-Sunnah Skill Development Institute</h3><p>Completed a three-month residential training program covering Computer Operations, Computer Hardware, Computer Applications, and Generative AI.</p></article>
+          <article class="card"><h3>As-Sunnah Skill Development Institute</h3><p>Completed a three-month residential training program covering Computer Operations, Computer Hardware, Computer Applications, and AI Automation.</p></article>
           <article class="card"><h3>Professional approach</h3><p>Continuous learning, practical problem-solving, professional integrity, teamwork, and a commitment to reliable IT services.</p></article>
         </div>
       </div>
     </section>
+<section id="cv"><div class="wrap"><div class="section-head"><div class="eyebrow">Download</div><h2>Professional CV</h2><p class="lead">Download the PDF CV or open the editable Word version. For ATS portals that discourage photos, consider providing a separate photo-free version.</p><div class="actions"><a class="btn primary" style="color:#15243b" href="rezaul-haque-cv.pdf" download>Download CV (PDF)</a><a class="btn" style="color:#315d7c;border-color:#315d7c" href="rezaul-haque-cv.docx">Word CV</a></div></div></div></section>
     <section id="contact" style="padding-top:0;">
       <div class="wrap">
         <div class="card" style="background:linear-gradient(120deg, #10233f, #1c477d); color:#fff; border:0; padding:30px;">
           <div class="eyebrow" style="color:#f1c96f">Connect</div><h2 style="color:#fff">Let’s connect and keep learning.</h2><p style="color:#e1eaf7;max-width:650px">I welcome professional connections, knowledge sharing, and opportunities to collaborate on IT, networking, and infrastructure topics.</p>
-          <div class="contact-links"><a class="contact-item" href="tel:+8801836799834"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72l.45 3a2 2 0 0 1-.57 1.7L7.1 9.27a16 16 0 0 0 7.63 7.63l1.85-1.85a2 2 0 0 1 1.7-.57l3 .45A2 2 0 0 1 22 16.92z"/></svg><span>01836799834</span></a><a class="contact-item" href="mailto:rezaul.haque.pro@gmail.com"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg><span>rezaul.haque.pro@gmail.com</span></a></div>
+          <div class="contact-links"><a href="tel:+8801836799834">Phone: 01836799834</a><a href="mailto:rezaul.haque.pro@gmail.com">Email: rezaul.haque.pro@gmail.com</a></div>
           <div class="actions"><a class="btn primary" href="https://rezaulhaquepro-gif.github.io/">Visit my live portfolio</a><button class="btn" id="copyMessage" type="button">Copy LinkedIn connection message</button></div><span id="copyStatus" aria-live="polite" style="margin-left:12px;font-size:.9rem"></span>
         </div>
       </div>
     </section>
-    <section id="cv">
-      <div class="wrap">
-        <div class="section-head"><div class="eyebrow">Career documents</div><h2>Professional CV</h2><p class="lead">Download or open the two-page CV PDF. The document uses selectable text, standard headings, and a single-column body; the requested portrait appears in the header.</p></div>
-        <div class="cv-actions"><a class="btn primary" href="rezaul-haque-cv.pdf" download="Md-Rezaul-Haque-CV.pdf">Download CV (PDF)</a><a class="btn" href="rezaul-haque-cv.pdf" target="_blank" rel="noopener">Open CV</a><a class="btn" href="rezaul-haque-cv.pdf" target="_blank" rel="noopener">Print CV (open PDF)</a></div>
-        <p class="lead" style="font-size:.9rem">To print, open the PDF and use your browser’s print control. For strict ATS portals, a no-photo version may parse more reliably.</p>
-      </div>
-    </section>
   </main>
-  <footer><div class="wrap"><span>Md. Rezaul Haque · IT & Network Executive</span><span class="contact-links" style="margin-top:0"><a class="contact-item" href="tel:+8801836799834" style="color:inherit"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 11.19 18a19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.09 3.18 2 2 0 0 1 4.08 1h3a2 2 0 0 1 2 1.72l.45 3a2 2 0 0 1-.57 1.7L7.1 9.27a16 16 0 0 0 7.63 7.63l1.85-1.85a2 2 0 0 1 1.7-.57l3 .45A2 2 0 0 1 22 16.92z"/></svg><span>01836799834</span></a><a class="contact-item" href="mailto:rezaul.haque.pro@gmail.com" style="color:inherit"><svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 7L2 7"/></svg><span>rezaul.haque.pro@gmail.com</span></a></span></div></footer>
+  <footer><div class="wrap"><span>Md. Rezaul Haque · IT & Network Executive</span><span><a href="mailto:rezaul.haque.pro@gmail.com" style="color:inherit">rezaul.haque.pro@gmail.com</a> · Knowledge | Experience | Impact</span></div></footer>
 </div>
 <script>
 document.getElementById('copyMessage').addEventListener('click', async function () {
@@ -154,5 +133,6 @@ document.getElementById('copyMessage').addEventListener('click', async function 
   catch (e) { status.textContent = message; }
 });
 </script>
+<a class="top-button" href="#top" aria-label="Back to top">↑ Top</a>
 </body>
 </html>
