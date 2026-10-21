@@ -64,9 +64,14 @@ main>section:not(.hero)>.wrap{animation:readInLeft .55s ease-out both}
 footer .footer-inner{display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
 footer .footer-inner a{color:#244b6a}
 .footer-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.footer-portfolio{display:inline-block;padding:11px 17px;border-radius:10px;background:#fff;color:#183b60!important;border:1px solid #cbd9e8;text-decoration:none;font-weight:800;box-shadow:0 5px 14px #10233f0d}
-.footer-portfolio:hover,.footer-portfolio:focus-visible{background:#f4f8fc;transform:translateY(-1px)}
-.footer-back{text-decoration:none;font-weight:700}
+.footer-portfolio,.footer-back{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:11px 17px;border-radius:10px;text-decoration:none;font-weight:800;letter-spacing:.01em;transition:transform .2s ease,box-shadow .2s ease,background .2s ease,color .2s ease,border-color .2s ease}
+.footer-portfolio{background:linear-gradient(135deg,#12375f 0%,#176f78 100%);color:#fff!important;border:1px solid #2b7e88;box-shadow:0 6px 18px rgba(18,55,95,.24),inset 0 1px 0 rgba(255,255,255,.18)}
+.footer-portfolio:hover,.footer-portfolio:focus-visible{background:linear-gradient(135deg,#1b4e7c 0%,#168b88 100%);box-shadow:0 0 0 3px rgba(35,119,109,.18),0 9px 24px rgba(18,55,95,.3);transform:translateY(-2px)}
+.footer-back{background:#fff;color:#173b5c!important;border:1px solid #c5d6e7;box-shadow:0 4px 12px rgba(16,35,63,.08)}
+.footer-back:hover,.footer-back:focus-visible{background:#fff8e5;color:#102d4b!important;border-color:#e0b84e;box-shadow:0 0 0 3px rgba(241,201,111,.28),0 8px 18px rgba(16,35,63,.12);transform:translateY(-2px)}
+.footer-portfolio:focus-visible,.footer-back:focus-visible{outline:3px solid #f1c96f;outline-offset:3px}
+.footer-portfolio:active,.footer-back:active{transform:translateY(0)}
+@media(max-width:520px){.footer-actions{width:100%}.footer-actions a{flex:1;text-align:center}}
 
 .certificate-btn{display:inline-flex;align-items:center;gap:8px;margin-top:10px;padding:10px 14px;border-radius:9px;background:#f3f7fc;color:#183b60;border:1px solid #cbd9e8;text-decoration:none;font-weight:750;box-shadow:0 3px 10px rgba(18,45,75,.06)}
 .certificate-btn:hover,.certificate-btn:focus-visible{background:#e7f0fa;color:#102d4b;outline-offset:3px}
