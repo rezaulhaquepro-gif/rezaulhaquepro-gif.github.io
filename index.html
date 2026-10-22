@@ -201,7 +201,7 @@ body.lightbox-open { overflow: hidden; }
 
 /* Information gallery: open any information card in a focused, navigable overlay. */
 .card[data-info-view] { cursor: zoom-in; position: relative; }
-.card[data-info-view]::after { content: "View details ↗"; display: inline-block; margin-top: 14px; color: #2356a8; font-size: .78rem; font-weight: 800; letter-spacing: .02em; }
+.card[data-info-view]::after { content: "Hover or touch to preview ↗"; display: inline-block; margin-top: 14px; color: #2356a8; font-size: .78rem; font-weight: 800; letter-spacing: .02em; }
 .card[data-info-view]:focus-visible { outline: 3px solid var(--gold); outline-offset: 3px; }
 .info-viewer { position: fixed; inset: 0; z-index: 10000; display: grid; place-items: center; padding: clamp(12px,3vw,32px); background: rgba(7,18,35,.82); backdrop-filter: blur(7px); opacity: 0; visibility: hidden; pointer-events: none; transition: opacity .24s ease, visibility .24s ease; }
 .info-viewer.is-open { opacity: 1; visibility: visible; pointer-events: auto; }
@@ -220,7 +220,7 @@ body.info-viewer-open { overflow:hidden; }
 @media(max-width:520px) { .info-viewer__dialog { max-height:88vh; border-radius:16px; } .info-viewer__nav button { padding:9px 11px; } }
 @media(prefers-reduced-motion:reduce) { .info-viewer,.info-viewer__dialog { transition:none!important; } }
 
-</style></head><body id="top"><header><div class="wrap"><nav><div class="brand">MD. REZAUL HAQUE / IT & NETWORKING</div><div><a href="#about">Profile</a><a href="#experience">Experience</a><a href="#academic">Academic Information</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#training">Training</a><a href="#contact">Contact</a><a href="#cv">CV</a></div></nav></div></header><main>
+</style></head><body id="top"><header><div class="wrap"><nav><div class="brand">PROFESSIONAL PORTFOLIO</div><div><a href="#about">Profile</a><a href="#experience">Experience</a><a href="#academic">Academic Information</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#training">Training</a><a href="#contact">Contact</a><a href="#cv">CV</a></div></nav></div></header><main>
 <section class="hero"><div class="wrap hero-layout"><div><div class="kicker">IT Operations · Network Administration · Technical Support</div><h1>Md. Rezaul Haque</h1><p>IT & Networking Executive at As-Sunnah Foundation, focused on reliable IT operations, network infrastructure support, MikroTik router management, CCTV systems, troubleshooting, and continuous professional development.</p><div class="actions"><a class="btn" href="#contact">Contact me</a></div></div><div class="profile-card"><div class="profile-name">MD. REZAUL HAQUE</div><div class="profile-frame"><img class="profile-photo" src="profile.jpg" alt="Professional photo of Md. Rezaul Haque"></div><div class="profile-title">IT &amp; Networking Professional</div></div></div></section>
 <section id="about"><div class="wrap"><div class="eyebrow">Professional profile</div><h2>Reliable support. Practical problem-solving. Continuous learning.</h2><p class="lead">IT & Network Executive at As-Sunnah Foundation with experience supporting network devices, router administration, CCTV surveillance, operating systems, and user-facing IT support. Focused on methodical troubleshooting, dependable services, clear communication, and continuous technical development.</p><p><strong>Phone:</strong> <a href="tel:+8801836799834">01836799834</a> &nbsp; <strong>Email:</strong> <a href="mailto:rezaul.haque.pro@gmail.com">rezaul.haque.pro@gmail.com</a></p></div></section>
 <section id="experience"><div class="wrap"><div class="eyebrow">Professional experience</div><h2>Career history</h2><p class="lead">Employment history in reverse chronological order, with each role and its dates shown separately.</p><div class="grid">
@@ -359,9 +359,41 @@ body.info-viewer-open { overflow:hidden; }
     card.setAttribute("role", "button");
     var title = card.querySelector("h3");
     card.setAttribute("aria-label", "Open details: " + (title ? title.textContent.trim() : "Information card"));
+    // Desktop: open automatically after a brief hover. Touch: use a short press,
+    // cancelled if the finger moves, so normal page scrolling remains natural.
+    var hoverTimer = null;
+    var touchTimer = null;
+    var touchStartX = 0;
+    var touchStartY = 0;
+    card.addEventListener("pointerenter", function (event) {
+      if (event.pointerType !== "mouse" || viewer.classList.contains("is-open")) return;
+      window.clearTimeout(hoverTimer);
+      hoverTimer = window.setTimeout(function () {
+        if (!viewer.classList.contains("is-open")) openCard(index);
+      }, 550);
+    });
+    card.addEventListener("pointerleave", function () { window.clearTimeout(hoverTimer); });
+    card.addEventListener("touchstart", function (event) {
+      if (viewer.classList.contains("is-open") || !event.touches || !event.touches.length) return;
+      touchStartX = event.touches[0].clientX;
+      touchStartY = event.touches[0].clientY;
+      window.clearTimeout(touchTimer);
+      touchTimer = window.setTimeout(function () {
+        if (!viewer.classList.contains("is-open")) openCard(index);
+      }, 420);
+    }, { passive: true });
+    card.addEventListener("touchmove", function (event) {
+      if (!event.touches || !event.touches.length) return;
+      var dx = event.touches[0].clientX - touchStartX;
+      var dy = event.touches[0].clientY - touchStartY;
+      if (Math.abs(dx) > 10 || Math.abs(dy) > 10) window.clearTimeout(touchTimer);
+    }, { passive: true });
+    card.addEventListener("touchend", function () { window.clearTimeout(touchTimer); }, { passive: true });
+    card.addEventListener("touchcancel", function () { window.clearTimeout(touchTimer); }, { passive: true });
     card.addEventListener("click", function (event) {
       if (event.target.closest("a,button,input,select,textarea,summary")) return;
-      openCard(index);
+      // Keep click as a fallback for keyboard/screen-reader and browsers without pointer events.
+      if (!viewer.classList.contains("is-open")) openCard(index);
     });
     card.addEventListener("keydown", function (event) {
       if (event.target !== card) return;
