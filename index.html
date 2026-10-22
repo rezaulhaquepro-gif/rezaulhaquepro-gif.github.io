@@ -82,7 +82,14 @@ footer .footer-inner a{color:#244b6a}
 .certificate-btn{display:inline-flex;align-items:center;gap:8px;margin-top:10px;padding:10px 14px;border-radius:9px;background:#f3f7fc;color:#183b60;border:1px solid #cbd9e8;text-decoration:none;font-weight:750;box-shadow:0 3px 10px rgba(18,45,75,.06)}
 .certificate-btn:hover,.certificate-btn:focus-visible{background:#e7f0fa;color:#102d4b;outline-offset:3px}
 
-/* Academic Information: gold rounded accent on the left side of each education card only */
+/* Consistent gold rounded accent on the left side of information cards across the site */
+main>section:not(.hero) .card,
+main>section:not(.hero) .project-card,
+main>section:not(.hero) .training>.card{
+  border-left:4px solid var(--gold);
+  border-radius:14px;
+  padding-left:20px;
+}
 #academic .grid > .card{border-left:4px solid var(--gold);border-radius:16px;padding-left:20px}
 
 /* Portfolio background refinement: visible light-blue page background, white header and original navy hero preserved. */
